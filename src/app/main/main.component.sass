@@ -1,0 +1,213 @@
+@import "src/assets/variables.sass"
+
+
+.main_wrapper
+  width: 100vw
+  height: 100vh
+  display: flex
+  justify-content: center
+  font-family: $roboto
+  background-color: $background-grey
+  .item
+    position: relative
+    display: flex
+    justify-content: space-between
+    width: 1200px
+    height: 226px
+    margin: 40px auto 40px
+    padding: 24px 32px 24px 70px
+    box-sizing: border-box
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.04)
+    border-radius: 8px
+    background-color: $background-white
+    &__close
+      position: absolute
+      display: flex
+      justify-content: center
+      top: 8px
+      right: 8px
+      width: 28px
+      height: 28px
+      border-radius: 4px
+      &:hover
+        background-color: $background-light-grey
+      &:active
+        background-color: $background-dark-grey
+      .btn-close
+
+        .close-icon
+          svg
+            width: 24px
+            height: 24px
+            stroke: $icon-color-main
+              fill: $icon-color-main
+            &:hover
+              stroke: $icon-color-hover
+              fill: $icon-color-hover
+
+    &__content
+      display: flex
+      width: 100%
+      border-right: 1px solid $border-grey
+      &-image
+        margin: 0 77px 0 0
+        img
+          height: 100%
+          max-height: 200px
+          max-width: 150px
+
+      &-info
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &-title
+          display: block
+          margin: 0 0 8px 0
+        &-wrapper
+          display: flex
+          flex-wrap: wrap
+          .item__content-info-cell
+            width: 30%
+            margin: 0 0 12px 0
+            span
+              display: block
+            &-title
+              font-weight: 400
+              font-size: 12px
+              color: $text-grey
+            &-text
+              font-weight: 500
+              font-size: 14px
+              color: $text-darkgrey
+        &-labels
+          display: flex
+          .item__content-info-label
+            display: flex
+            justify-content: flex-end
+            width: max-content
+            margin: 0 16px 0 0
+            padding: 8px 16px
+            border-radius: 22px
+            font-weight: 500
+            font-size: 12px
+            span
+              display: block
+              img
+                padding-top: 1px
+            &-text
+              padding: 0 0 0 10px
+    &__offer
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      width: 330px
+      padding: 0 0 0 30px
+      &-wrapper
+        width: 240px
+        margin: 0 0 2px 0
+        .item__offer-text
+        font-weight: 400
+        font-size: 14px
+        color: $text-grey
+      &-title
+        display: block
+        margin: 12px 0
+      &-button
+        .btn__offer
+          width: 268px
+          display: flex
+          align-items: flex-end
+          justify-content: center
+          background-color: $background-yellow
+          border-radius: 6px
+          padding: 12px 50px
+          &:hover
+            background-color: $background-dark-yellow
+          &:active
+            background-color: $background-darkest-yellow
+          span
+            display: block
+          .btn__offer-text
+            margin: 0 0 0 8px
+            font-weight: 500
+            font-size: 14px
+            line-height: 20px
+          .btn__offer-icon
+            line-height: 13px
+
+@media screen and (max-width: 1040px)
+  .item
+    height: 314px!important
+  .item__content-info-cell
+    width: 50%!important
+  .item__content-info-labels
+    flex-direction: column
+    .item__content-info-label
+      justify-content: left!important
+      margin: 0 0 8px 0!important
+
+@media screen and (max-width: 880px)
+  .item
+    flex-direction: column
+    width: 712px!important
+    height: auto!important
+    min-height: 440px
+    justify-content: flex-start!important
+  .item__content-info-labels
+    flex-direction: row
+    justify-content: space-between
+  .item__content
+    margin: 0 0 23px 0
+    border-right: none!important
+    border-bottom: 1px solid $border-grey
+  .item__offer
+    width: auto!important
+  .item__offer-title
+    margin: 12px 0 12px 0!important
+  .item__offer-button
+    margin: 24px 0 0!important
+  .btn__offer
+    width: 100% !important
+
+@media screen and (max-width: 680px)
+  .item
+    width: 304px!important
+    padding: 20px!important
+    height: auto!important
+    justify-content: flex-start!important
+  .item__content
+    flex-direction: column
+    .item__content-info-labels
+      flex-direction: column
+    .item__content-image
+      margin: 0!important
+      text-align: center
+  .item__offer
+    padding: 0!important
+
+//на боевом проекте все эти стили выносятся в отдельные style, как и variables
+//font-colors
+.blue
+  color: $text-blue!important
+.red
+  color: $text-red!important
+.green
+  color: $text-green!important
+
+//background-colors
+.background-green
+  background-color: $background-green
+.background-red
+  background-color: $background-red
+//service-classes
+.title
+  font-weight: 700
+  font-size: 24px
+  color: $text-darkgrey
+.btn
+  border: none
+  background: none
+  cursor: pointer
+  &:focus
+    border: none!important
+    outline: none
