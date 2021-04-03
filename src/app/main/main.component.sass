@@ -136,54 +136,57 @@
             line-height: 13px
 
 @media screen and (max-width: 1040px)
-  .item
-    height: 314px!important
-  .item__content-info-cell
-    width: 50%!important
-  .item__content-info-labels
-    flex-direction: column
-    .item__content-info-label
-      justify-content: left!important
-      margin: 0 0 8px 0!important
-
-@media screen and (max-width: 880px)
-  .item
-    flex-direction: column
-    width: 712px!important
-    height: auto!important
-    min-height: 440px
-    justify-content: flex-start!important
-  .item__content-info-labels
-    flex-direction: row
-    justify-content: space-between
-  .item__content
-    margin: 0 0 23px 0
-    border-right: none!important
-    border-bottom: 1px solid $border-grey
-  .item__offer
-    width: auto!important
-  .item__offer-title
-    margin: 12px 0 12px 0!important
-  .item__offer-button
-    margin: 24px 0 0!important
-  .btn__offer
-    width: 100% !important
-
-@media screen and (max-width: 680px)
-  .item
-    width: 304px!important
-    padding: 20px!important
-    height: auto!important
-    justify-content: flex-start!important
-  .item__content
-    flex-direction: column
+  .main_wrapper
+    .item
+      height: 314px
+    .item__content-info-cell
+      width: 50%
     .item__content-info-labels
       flex-direction: column
-    .item__content-image
-      margin: 0!important
-      text-align: center
-  .item__offer
-    padding: 0!important
+      .item__content-info-label
+        justify-content: left
+        margin: 0 0 8px 0
+
+@media screen and (max-width: 880px)
+  .main_wrapper
+    .item
+      flex-direction: column
+      width: 712px
+      height: auto
+      min-height: 440px
+      justify-content: flex-start
+    .item__content-info-labels
+      flex-direction: row
+      justify-content: space-between
+    .item__content
+      margin: 0 0 23px 0
+      border-right: none
+      border-bottom: 1px solid $border-grey
+    .item__offer
+      width: auto
+    .item__offer-title
+      margin: 12px 0 12px 0
+    .item__offer-button
+      margin: 24px 0 0
+    .btn__offer
+      width: 100%
+
+@media screen and (max-width: 680px)
+  .main_wrapper
+    .item
+      width: 304px
+      padding: 20px
+      height: auto
+      justify-content: flex-start
+    .item__content
+      flex-direction: column
+      .item__content-info-labels
+        flex-direction: column
+      .item__content-image
+        margin: 0
+        text-align: center
+    .item__offer
+      padding: 0
 
 //на боевом проекте все эти стили выносятся в отдельные style, как и variables
 //font-colors
